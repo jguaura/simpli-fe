@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.container .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.container .items {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+}
+
+.container .items button {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.socialMedia {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-bottom: 30px;
+}
+.socialMedia .icons {
+  display: flex;
+  justify-content: space-between;
+}
+.socialMedia .footer {
+  display: flex;
+  flex-direction: column;
+}
+.socialMedia .footer .copy {
+  text-align: center;
+}
+.socialMedia .promo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+}

@@ -1,0 +1,92 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.content {
+  background-color: white;
+  height: 900px;
+  width: 100%;
+  inset: 0 auto;
+  right: 0;
+  height: 100%;
+  width: 25%;
+  z-index: 55;
+  position: fixed;
+  padding: 1rem 1.25rem;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0,0,0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.content[data-state=open] {
+  animation: slideInFromRight 300ms ease-in-out;
+}
+.content[data-state=closed] {
+  animation: slideOutToRight 300ms ease-in-out;
+}
+.overlay[data-state="open"] {
+  animation: fadeIn 200ms ease-in-out;
+}
+.overlay[data-state="closed"] {
+  animation: fadeOut 200ms ease-in-out;
+}
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+@media(max-width: 820px) {
+  .content {
+    width: 50%;
+  }
+}
+
+@media(max-width: 450px) {
+  .content {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

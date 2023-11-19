@@ -9,7 +9,7 @@ function LoadMoreProducts() {
 
   useEffect(() => {
     if (inView) {
-      loadMoreBikes();
+      // loadMoreBikes();
     }
   }, [inView]);
 

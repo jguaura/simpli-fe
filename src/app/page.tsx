@@ -7,7 +7,6 @@ export default async function Home() {
   const bikes = await fetchBikes(1);
   return (
     <main className={styles.main}>
-      <h1>Hola</h1>
       <ProductsWrapper bikes={bikes} />
       <LoadMore />
     </main>
