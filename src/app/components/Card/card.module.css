@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.card .imageContainer {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.card .cardInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card .cardInfo .cardName {
+  font-weight: 600;
+}
+
+.card .cardInfo button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
