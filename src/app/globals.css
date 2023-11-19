@@ -55,3 +55,15 @@ button {
   cursor: pointer;
 }
 
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+@media(max-width: 400px) {
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+}

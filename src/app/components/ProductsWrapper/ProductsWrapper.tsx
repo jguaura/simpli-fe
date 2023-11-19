@@ -1,16 +1,16 @@
-import { Bike, Bikes } from '@/core/models/bikes.model';
-import Card from './Card/Card';
+import { Bike } from '@/core/models/bikes.model';
+import Card from '../Card/Card';
 import styles from './ProductsWrapper.module.css';
-import { useState } from 'react';
-import Spinner from './spinner';
+import CardSkeleton from '../CardSkeleton/CardSkeleton';
 
 interface ProductsWrapperProps {
   bikes: Bike[];
 }
 
 function ProductsWrapper({ bikes }: ProductsWrapperProps) {
+  if (!bikes) return <span>Error loading bikes</span>;
   return (
-    <div className={styles.container}>
+    <div className="products-container">
       {bikes.map((bike: Bike, index: number) => (
         <Card product={bike} key={index} />
       ))}

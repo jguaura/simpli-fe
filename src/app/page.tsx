@@ -1,7 +1,7 @@
 import styles from './page.module.css';
-import ProductsWrapper from './components/ProductsWrapper';
+import ProductsWrapper from './components/ProductsWrapper/ProductsWrapper';
 import { fetchBikes } from './actions/fetch-bikes';
-import LoadMore from './components/LoadMore';
+import LoadMore from './components/LoadMoreProducts/LoadMoreProducts';
 
 export default async function Home() {
   const bikes = await fetchBikes(1);

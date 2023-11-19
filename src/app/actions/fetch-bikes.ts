@@ -1,7 +1,7 @@
 "use server"
 
 export async function fetchBikes(page: number) {
-  const limit = 9;
+  const limit = 12;
   const apiUrl = `http://localhost:1337/bikes?page=${page}&limit=${limit}`;
 
   try {
