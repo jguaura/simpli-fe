@@ -4,27 +4,11 @@ import { Lato } from 'next/font/google';
 import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import styles from './InfoModalForm.module.css';
+import useInfoModalForm from './hooks/useInfoModalForm';
 
-type Inputs = {
-  name: string;
-  email: string;
-};
 const lato = Lato({ weight: ['400', '700'], subsets: ['latin'] });
 function InfoModalContent() {
-  const [leadResponse, setLeadResponse] = useState(null);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm<Inputs>();
-
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    const response = await createLead(data);
-    setLeadResponse(response);
-  };
-  const nameInputStyles = `${errors?.name?.message ? 'error' : ''} ${lato.className}`
-  const emailInputStyles = `${errors?.email?.message ? 'error' : ''} ${lato.className}`
-  const submitBtnStyles = `${styles.submitBtn} btn`;
+  const { handleSubmit, onSubmit, register, errors, nameInputStyles, emailInputStyles, submitBtnStyles } = useInfoModalForm();
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>

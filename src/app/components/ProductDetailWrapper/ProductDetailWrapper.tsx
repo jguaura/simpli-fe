@@ -18,13 +18,13 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
 
   return (
     <>
-      <button className={styles.backBtn}>
-        <Link href='/'>
-          <MdOutlineArrowBack />
-          <span>Go back</span>
-        </Link>
-      </button>
       <div className={styles.container}>
+        <button className={styles.backBtn}>
+          <Link href='/'>
+            <MdOutlineArrowBack />
+            <span>Go back</span>
+          </Link>
+        </button>
         <div className={styles.imgContainer}>
           <Image
             src={removeCloudinaryTransformations(image)}
@@ -40,7 +40,7 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
           </div>
           <div className={styles.buttons}>
             <button>Add to cart</button>
-            <InfoModal />
+            <InfoModal productName={name} />
           </div>
           <span>{description}</span>
         </div>

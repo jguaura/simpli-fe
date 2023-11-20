@@ -9,7 +9,11 @@ import {
 } from '../../Shared/Shadcn/BaseDialog/BaseDialog';
 import InfoModalContent from './InfoModalForm/InfoModalForm';
 
-function InfoModal() {
+interface InfoModalProps {
+  productName: string;
+}
+
+function InfoModal ({ productName }: InfoModalProps) {
   return (
     <Dialog>
       <DialogTrigger>Get more info</DialogTrigger>
@@ -17,7 +21,7 @@ function InfoModal() {
         <DialogHeader>
           <DialogTitle>Contact Information</DialogTitle>
           <DialogDescription>
-            To provide you with details about the <strong>Name</strong>, please
+            To provide you with details about the <strong>{productName}</strong>, please
             share your contact information with us.
           </DialogDescription>
         </DialogHeader>

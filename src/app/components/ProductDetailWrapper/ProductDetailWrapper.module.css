@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   gap: .5rem;
-  font-size: .8rem;
-  margin-top: 1rem;
 }
 
 .container {
@@ -41,7 +39,7 @@
 }
 
 .content .buttons button {
-  background-color: #800000;
+  background-color: #903df7;
   color: white;
   padding: .6rem 1rem;
   border-radius: 4px;
