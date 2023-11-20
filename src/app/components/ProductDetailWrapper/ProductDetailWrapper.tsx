@@ -5,6 +5,7 @@ import { Kanit } from 'next/font/google';
 import { removeCloudinaryTransformations } from '@/app/utils/utils';
 import Link from 'next/link';
 import { MdOutlineArrowBack } from "react-icons/md";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../Shared/Shadcn/BaseDialog/BaseDialog';
 
 interface ProductDetailProps {
   product: Product;
@@ -39,7 +40,18 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
           </div>
           <div className={styles.buttons}>
             <button>Add to cart</button>
-            <button>Get more info</button>
+            <Dialog>
+              <DialogTrigger>Get more info</DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+                  <DialogDescription>
+                    This action cannot be undone. This will permanently delete
+                    your account and remove your data from our servers.
+                  </DialogDescription>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
           </div>
           <span>{description}</span>
         </div>
