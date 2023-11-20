@@ -104,9 +104,20 @@ button.btn {
   font-weight: 600;
 }
 
+.form-control input.error {
+  border-color: red;
+  color: red;
+}
+
 .form-control:placeholder {
   color: #dcdcdc;
   font-weight: 400;
+}
+
+.form-control span[role="alert"] {
+  font-size: .7rem;
+  color: red;
+  margin-top: .3rem;
 }
 
 @media (max-width: 991px) {
