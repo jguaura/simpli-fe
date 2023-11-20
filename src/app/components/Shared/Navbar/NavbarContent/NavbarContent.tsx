@@ -7,6 +7,8 @@ import {
   SiWhatsapp,
   SiGithub
 } from 'react-icons/si';
+import Link from 'next/link';
+import { SheetClose } from '../../Shadcn/BaseSheet';
 
 const chivo = Chivo({ subsets: ['latin'] });
 const kanit = Kanit({ weight: ['400', '600', '700'], subsets: ['latin'] });
@@ -20,15 +22,19 @@ function NavbarContent() {
     <div className={styles.container}>
       <h2 className={logoStyles}>BikesWorld</h2>
       <div className={itemsStyles}>
-        <button>Bikes</button>
-        <button>Accesories</button>
+        <SheetClose asChild>
+          <Link href='/'>Bikes</Link>
+        </SheetClose>
+        <SheetClose asChild>
+          <Link href='/accesories'>Accesories</Link>
+        </SheetClose>
       </div>
       <div className={socialMediaStyles}>
         <div className={styles.icons}>
           <SiFacebook size='20' />
           <SiWhatsapp size='20' />
           <SiInstagram size='20' />
-          <SiTwitter size="20" />
+          <SiTwitter size='20' />
         </div>
         <div className={styles.footer}>
           <div className={styles.copy}>
