@@ -64,6 +64,11 @@ a {
   border-width: 0;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1195px;
+}
+
 .products-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -71,7 +76,13 @@ a {
   padding: 0 1.25rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 991px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
   .products-container {
     grid-template-columns: 1fr;
   }

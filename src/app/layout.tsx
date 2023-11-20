@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={lato.className}>
         <Navbar />
-        {children}
+        <div className='wrapper'>{children}</div>
       </body>
     </html>
   );
