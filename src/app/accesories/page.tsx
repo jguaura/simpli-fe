@@ -1,5 +1,5 @@
 import { fetchProducts } from "../actions/fetch-products";
-import LoadMoreProducts from "../components/LoadMoreProducts/LoadMoreProducts";
+import LoadMoreProducts from "../components/Shared/LoadMoreProducts/LoadMoreProducts";
 import ProductsWrapper from "../components/Shared/ProductsWrapper/ProductsWrapper";
 
 export default async function Accesories() {

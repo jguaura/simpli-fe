@@ -2,7 +2,11 @@
 import { Chivo } from 'next/font/google';
 import styles from './Navbar.module.css';
 import { MdDehaze } from 'react-icons/md';
-import { Sheet, SheetContent, SheetTrigger } from '../UI/BaseSheet/BaseSheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger
+} from '../../UI/BaseSheet/BaseSheet';
 import NavbarContent from './NavbarContent/NavbarContent';
 import Link from 'next/link';
 

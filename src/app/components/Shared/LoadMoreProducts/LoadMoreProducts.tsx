@@ -1,7 +1,7 @@
 'use client';
 import { useEffect } from 'react';
-import ProductsWrapper from '../Shared/ProductsWrapper/ProductsWrapper';
-import CardSkeleton from '../CardSkeleton/CardSkeleton';
+import ProductsWrapper from '../ProductsWrapper/ProductsWrapper';
+import CardSkeleton from '../../UI/CardSkeleton/CardSkeleton';
 import useLoadMoreProducts from './hooks/useLoadMoreProducts';
 
 function LoadMoreProducts() {

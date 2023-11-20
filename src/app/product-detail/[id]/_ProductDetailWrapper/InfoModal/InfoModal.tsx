@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger
-} from '../../Shared/UI/BaseDialog/BaseDialog';
+} from '../../../../components/UI/BaseDialog/BaseDialog';
 import InfoModalContent from './InfoModalForm/InfoModalForm';
 
 interface InfoModalProps {

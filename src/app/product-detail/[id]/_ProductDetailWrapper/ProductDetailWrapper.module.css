@@ -1,50 +1,49 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 1.25rem 0;
 }
 .containerInner {
   box-sizing: border-box;
   display: flex;
   align-items: center;
 }
-
 .container .imgContainer {
   position: relative; 
   min-width: 50%; 
   height: 420px;
 }
-
 .content {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   max-width: 40%;
 }
-
 .content h3 {
   font-size: 2rem;
   font-weight: 700;
 }
-
 .content h6 {
   color: var(--charcoal);
 }
-
 .content .buttons {
   display: flex;
   gap: 1rem;
 }
-
 .content .buttons button {
   background-color: var(--purple);
   color: white;
   padding: .6rem 1rem;
   border-radius: 4px;
 }
-
 .content .buttons button:last-of-type {
   background-color: var(--dark-grey);
+}
+
+@media(max-width: 1250px) {
+  .container {
+    padding: 1.25rem;
+  }
 }
 
 @media(max-width: 991px) {

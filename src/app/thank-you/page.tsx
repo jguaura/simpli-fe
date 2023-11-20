@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './thank-you.module.css';
 import { IoCheckmarkCircleOutline } from 'react-icons/io5';
 
@@ -12,7 +13,9 @@ export default async function ThankYou() {
           If you have any questions or need further assistance, feel free to
           reach out. Have a great day!
         </p>
-        <button className='btn'>Go to home</button>
+        <button className='btn'>
+          <Link href={'/'}>Go to home</Link>
+        </button>
       </div>
     </div>
   );

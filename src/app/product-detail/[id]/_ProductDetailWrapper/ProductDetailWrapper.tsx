@@ -4,7 +4,7 @@ import styles from './ProductDetailWrapper.module.css';
 import { Kanit } from 'next/font/google';
 import { removeCloudinaryTransformations } from '@/app/utils/utils';
 import InfoModal from './InfoModal/InfoModal';
-import BackBtn from '../Shared/BackBtn/BackBtn';
+import BackBtn from '../../../components/Shared/BackBtn/BackBtn';
 
 interface ProductDetailProps {
   product: Product;
