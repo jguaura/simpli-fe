@@ -48,10 +48,12 @@
   right: 0;
   height: 100%;
   width: 25%;
+  max-width: 300px;
   z-index: 55;
   position: fixed;
   padding: 1rem 1.25rem;
 }
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -63,15 +65,19 @@
 .content[data-state=open] {
   animation: slideInFromRight 300ms ease-in-out;
 }
+
 .content[data-state=closed] {
   animation: slideOutToRight 300ms ease-in-out;
 }
+
 .overlay[data-state="open"] {
   animation: fadeIn 200ms ease-in-out;
 }
+
 .overlay[data-state="closed"] {
   animation: fadeOut 200ms ease-in-out;
 }
+
 .closeBtn {
   position: absolute;
   top: 12px;
