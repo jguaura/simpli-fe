@@ -2,12 +2,9 @@
 import { Chivo } from 'next/font/google';
 import styles from './Navbar.module.css';
 import { MdDehaze } from 'react-icons/md';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger
-} from '../Shadcn/BaseSheet/BaseSheet';
+import { Sheet, SheetContent, SheetTrigger } from '../UI/BaseSheet/BaseSheet';
 import NavbarContent from './NavbarContent/NavbarContent';
+import Link from 'next/link';
 
 const chivo = Chivo({ subsets: ['latin'] });
 
@@ -18,7 +15,11 @@ function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={navbarInnerStyles}>
-        <h2 className={logoStyles}>VroomVault</h2>
+        <button>
+          <Link href={'/'} className={logoStyles}>
+            VroomVault
+          </Link>
+        </button>
         <Sheet>
           <SheetTrigger asChild>
             <button>

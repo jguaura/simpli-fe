@@ -41,17 +41,18 @@
 }
 
 .content {
+  box-sizing: border-box;
   background-color: white;
   height: 900px;
   width: 100%;
   inset: 0 auto;
   right: 0;
   height: 100%;
-  width: 25%;
-  max-width: 300px;
+  width: 35%;
+  max-width: 350px;
   z-index: 55;
   position: fixed;
-  padding: 1rem 1.25rem;
+  padding: 2rem 1.25rem;
 }
 
 .overlay {
@@ -93,6 +94,8 @@
 @media(max-width: 450px) {
   .content {
     box-sizing: border-box;
+ 
     width: 100%;
+    max-width: 100%;
   }
 }

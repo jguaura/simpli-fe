@@ -30,7 +30,7 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
-  padding-bottom: 30px;
+  padding-bottom: 3.2rem;
 }
 .socialMedia .icons {
   display: flex;

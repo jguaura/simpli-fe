@@ -8,7 +8,7 @@ import {
   SiGithub
 } from 'react-icons/si';
 import Link from 'next/link';
-import { SheetClose } from '../../Shadcn/BaseSheet/BaseSheet';
+import { SheetClose } from '../../UI/BaseSheet/BaseSheet';
 
 const chivo = Chivo({ subsets: ['latin'] });
 const kanit = Kanit({ weight: ['400', '600', '700'], subsets: ['latin'] });
