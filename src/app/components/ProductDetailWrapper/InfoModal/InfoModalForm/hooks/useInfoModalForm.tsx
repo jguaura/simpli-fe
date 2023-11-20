@@ -33,13 +33,13 @@ const useInfoModalForm = () => {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const response = await createLead(data);
     setLeadResponse(response);
-    if(!response.error) router.push('/accesories')
+    if(!response.error) router.push('/thank-you')
   };
 
   const nameInputStyles = `${errors?.name?.message ? 'error' : ''} ${lato.className}`;
   const emailInputStyles = `${errors?.email?.message ? 'error' : ''} ${lato.className}`;
   const submitBtnStyles = `${styles.submitBtn} btn`;
-  
+
   return {
     onSubmit,
     register,
