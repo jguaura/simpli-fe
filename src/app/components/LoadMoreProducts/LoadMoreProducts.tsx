@@ -5,17 +5,17 @@ import CardSkeleton from '../CardSkeleton/CardSkeleton';
 import useLoadMoreProducts from './hooks/useLoadMoreProducts';
 
 function LoadMoreProducts() {
-  const { bikes, loadMoreBikes, ref, inView } = useLoadMoreProducts();
+  const {loadMoreProducts, products, ref, inView } = useLoadMoreProducts();
 
   useEffect(() => {
     if (inView) {
-      // loadMoreBikes();
+      loadMoreProducts();
     }
   }, [inView]);
 
   return (
     <>
-      <ProductsWrapper bikes={bikes} />
+      <ProductsWrapper products={products} />
       <div className="products-container" ref={ref}>
         <CardSkeleton />
         <CardSkeleton />

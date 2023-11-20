@@ -2,7 +2,7 @@
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-export async function fetchBikes(page: number) {
+export async function fetchProducts(page: number) {
   const limit = 12;
   const apiUrl = `${baseUrl}?${page}&limit=${limit}`;
 

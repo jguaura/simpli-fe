@@ -2,17 +2,18 @@ import { Bike } from '@/core/models/bikes.model';
 import Card from '../Card/Card';
 import styles from './ProductsWrapper.module.css';
 import CardSkeleton from '../CardSkeleton/CardSkeleton';
+import { Product } from '@/core/models/product.model';
 
 interface ProductsWrapperProps {
-  bikes: Bike[];
+  products: Product[];
 }
 
-function ProductsWrapper({ bikes }: ProductsWrapperProps) {
-  if (!bikes) return <span>Error loading bikes</span>;
+function ProductsWrapper({ products }: ProductsWrapperProps) {
+  if (!products) return <span>Error loading bikes</span>;
   return (
     <div className="products-container">
-      {bikes.map((bike: Bike, index: number) => (
-        <Card product={bike} key={index} />
+      {products.map((product: Product, index: number) => (
+        <Card product={product} key={index} />
       ))}
     </div>
   );
