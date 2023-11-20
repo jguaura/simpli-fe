@@ -15,7 +15,7 @@ function Navbar() {
   const logoStyles = `${chivo.className} ${styles.logo}`;
   return (
     <div className={styles.navbar}>
-      <h2 className={logoStyles}>BikesWorld</h2>
+      <h2 className={logoStyles}>VroomVault</h2>
       <Sheet>
         <SheetTrigger asChild>
           <button>

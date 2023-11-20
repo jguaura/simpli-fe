@@ -1,4 +1,4 @@
-export interface Bike {
+export interface Product {
   _id: any;
   name: string;
   description: string;
@@ -6,4 +6,4 @@ export interface Bike {
   image: string;
 }
 
-export type Bikes = Bike[];
+export type Products = Product[];

@@ -20,7 +20,7 @@ function NavbarContent() {
 
   return (
     <div className={styles.container}>
-      <h2 className={logoStyles}>BikesWorld</h2>
+      <h2 className={logoStyles}>VroomVault</h2>
       <div className={itemsStyles}>
         <SheetClose asChild>
           <Link href='/'>Bikes</Link>
@@ -38,7 +38,7 @@ function NavbarContent() {
         </div>
         <div className={styles.footer}>
           <div className={styles.copy}>
-            BikesWorld &copy; 2023. All rights reserved.
+            VroomVault &copy; 2023. All rights reserved.
           </div>
           <div className={styles.promo}>
             <span>Jose R. Guaura</span>
