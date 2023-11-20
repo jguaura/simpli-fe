@@ -1,11 +1,9 @@
 "use client"
-
 import { createLead } from "@/app/actions/create-leads";
 import { Lato } from "next/font/google";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import styles from '../InfoModalForm.module.css';
-import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 export type Inputs = {

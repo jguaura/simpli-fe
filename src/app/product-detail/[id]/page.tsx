@@ -7,10 +7,9 @@ export default async function ProductDetail({
   params: { id: string };
 }) {
   const product = await fetchProduct(id);
-
   return (
-    <div>
+    <>
       <ProductDetailWrapper product={product} />
-    </div>
+    </>
   );
 }

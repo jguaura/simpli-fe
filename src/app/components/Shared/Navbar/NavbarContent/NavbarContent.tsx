@@ -23,7 +23,10 @@ function NavbarContent() {
       <h2 className={logoStyles}>VroomVault</h2>
       <div className={itemsStyles}>
         <SheetClose asChild>
-          <Link href='/'>Bikes</Link>
+          <Link href='/'>Home</Link>
+        </SheetClose>
+        <SheetClose asChild>
+          <Link href='/products'>Bikes</Link>
         </SheetClose>
         <SheetClose asChild>
           <Link href='/accesories'>Accesories</Link>

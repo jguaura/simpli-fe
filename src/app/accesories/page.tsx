@@ -1,9 +1,14 @@
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../components/Shared/Shadcn/BaseDialog/BaseDialog";
+import { fetchProducts } from "../actions/fetch-products";
+import LoadMoreProducts from "../components/LoadMoreProducts/LoadMoreProducts";
+import ProductsWrapper from "../components/Shared/ProductsWrapper/ProductsWrapper";
 
-export default function Accesories() {
+export default async function Accesories() {
+  const route = '/accesories'
+  const accesories = await fetchProducts(1, route);
   return (
-    <div>
-      <h1>accesories</h1>
-    </div>
+    <>
+      <ProductsWrapper products={accesories} />
+      <LoadMoreProducts />
+    </>
   );
 }

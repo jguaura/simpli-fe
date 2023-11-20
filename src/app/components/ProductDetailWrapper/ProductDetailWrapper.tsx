@@ -3,9 +3,8 @@ import Image from 'next/image';
 import styles from './ProductDetailWrapper.module.css';
 import { Kanit } from 'next/font/google';
 import { removeCloudinaryTransformations } from '@/app/utils/utils';
-import Link from 'next/link';
-import { MdOutlineArrowBack } from 'react-icons/md';
 import InfoModal from './InfoModal/InfoModal';
+import BackBtn from '../Shared/BackBtn/BackBtn';
 
 interface ProductDetailProps {
   product: Product;
@@ -15,16 +14,10 @@ const kanit = Kanit({ weight: ['400', '600', '700'], subsets: ['latin'] });
 
 function ProductDetailWrapper({ product }: ProductDetailProps) {
   const { image, name, description, price } = product;
-
   return (
-    <>
-      <div className={styles.container}>
-        <button className={styles.backBtn}>
-          <Link href='/'>
-            <MdOutlineArrowBack />
-            <span>Go back</span>
-          </Link>
-        </button>
+    <div className={styles.container}>
+      <BackBtn />
+      <div className={styles.containerInner}>
         <div className={styles.imgContainer}>
           <Image
             src={removeCloudinaryTransformations(image)}
@@ -45,7 +38,7 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
           <span>{description}</span>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
