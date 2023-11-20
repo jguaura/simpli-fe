@@ -28,7 +28,7 @@
 }
 
 .content h6 {
-  color: #333333;
+  color: var(--charcoal);
 }
 
 .content .buttons {
@@ -37,14 +37,14 @@
 }
 
 .content .buttons button {
-  background-color: #903df7;
+  background-color: var(--purple);
   color: white;
   padding: .6rem 1rem;
   border-radius: 4px;
 }
 
 .content .buttons button:last-of-type {
-  background-color: #525252;
+  background-color: var(--dark-grey);
 }
 
 @media(max-width: 991px) {

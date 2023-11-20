@@ -6,6 +6,6 @@
 }
 
 .submitBtn {
-  background-color: #903df7;
+  background-color: var(--purple);
   color: white;
 }

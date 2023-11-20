@@ -1,3 +1,14 @@
+:root {
+  --purple: #903df7;
+  --charcoal:#333333;
+  --dark-grey: #525252;
+  --grey: #d3d3d3;
+  --light-grey: #dcdcdc;
+  --red: #FF5555;
+  --skeleton-grey: #f5f5f5;
+  --skeleton-grey-alt: #eaeaea;
+}
+
 body {
   padding: 0 0 4rem;
 }
@@ -99,29 +110,29 @@ button.btn {
   padding: 10px;
   border-radius: 4px;
   font-size: .8rem;
-  border: 1px solid #d3d3d3;
-  color: #333333;
+  border: 1px solid var(--grey);
+  color: var(--charcoal);
   font-weight: 600;
 }
 
 .form-control input.error {
-  border-color: red;
-  color: red;
+  border-color: var(--red);
+  color: var(--red);
 }
 
 span.error {
-  color: red;
+  color: var(--red);
   font-size: .7rem;
 }
 
 .form-control:placeholder {
-  color: #dcdcdc;
+  color: var(--light-grey);
   font-weight: 400;
 }
 
 .form-control span[role="alert"] {
   font-size: .7rem;
-  color: red;
+  color: var(--red);
   margin-top: .3rem;
 }
 

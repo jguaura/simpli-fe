@@ -1,0 +1,40 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  width: 100%
+}
+
+.container .innerContainer {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 480px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.container .innerContainer h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.container .innerContainer button {
+  background-color: var(--purple);
+  color: white;
+}
+
+@media(max-width: 500px) {
+  .container .innerContainer {
+    margin-top: 50px;
+  }
+  .container .innerContainer h3 {
+    font-size: 1.8rem;
+  }
+}
