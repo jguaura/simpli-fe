@@ -1,0 +1,11 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .8rem
+}
+
+.submitBtn {
+  background-color: #903df7;
+  color: white;
+}

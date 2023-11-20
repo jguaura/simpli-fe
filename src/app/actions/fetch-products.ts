@@ -4,7 +4,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function fetchProducts(page: number) {
   const limit = 12;
-  const apiUrl = `${baseUrl}?${page}&limit=${limit}`;
+  const apiUrl = `${baseUrl}/products?${page}&limit=${limit}`;
 
   try {
     const response = await fetch(apiUrl)
@@ -17,7 +17,7 @@ export async function fetchProducts(page: number) {
 }
 
 export async function fetchProduct(id: string) {
-  const apiUrl = `${baseUrl}?id=${id}`;
+  const apiUrl = `${baseUrl}/products?id=${id}`;
   try {
     const response = await fetch(apiUrl)
     const data = await response.json();
@@ -27,3 +27,4 @@ export async function fetchProduct(id: string) {
     return null;
   }
 }
+

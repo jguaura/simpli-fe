@@ -6,6 +6,7 @@ import { removeCloudinaryTransformations } from '@/app/utils/utils';
 import Link from 'next/link';
 import { MdOutlineArrowBack } from "react-icons/md";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../Shared/Shadcn/BaseDialog/BaseDialog';
+import InfoModalContent from './InfoModalContent/InfoModalContent';
 
 interface ProductDetailProps {
   product: Product;
@@ -44,12 +45,13 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
               <DialogTrigger>Get more info</DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+                  <DialogTitle>Contact Information</DialogTitle>
                   <DialogDescription>
-                    This action cannot be undone. This will permanently delete
-                    your account and remove your data from our servers.
+                    To provide you with details about the <strong>{name}</strong>, please
+                    share your contact information with us.
                   </DialogDescription>
                 </DialogHeader>
+                <InfoModalContent />
               </DialogContent>
             </Dialog>
           </div>

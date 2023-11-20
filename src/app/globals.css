@@ -52,6 +52,11 @@ a {
   cursor: pointer;
 }
 
+button.btn {
+  padding: .6rem 1rem;
+  border-radius: 4px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -75,6 +80,33 @@ a {
   gap: 1.25rem;
   padding: 0 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.form-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  font-size: .8rem;
+  margin-bottom: .3rem;
+}
+
+.form-control input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: .8rem;
+  border: 1px solid #d3d3d3;
+  color: #333333;
+  font-weight: 600;
+}
+
+.form-control:placeholder {
+  color: #dcdcdc;
+  font-weight: 400;
 }
 
 @media (max-width: 991px) {
