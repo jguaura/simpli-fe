@@ -1,8 +1,10 @@
 "use server"
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
 export async function fetchBikes(page: number) {
   const limit = 12;
-  const apiUrl = `http://localhost:1337/bikes?page=${page}&limit=${limit}`;
+  const apiUrl = `${baseUrl}?${page}&limit=${limit}`;
 
   try {
     const response = await fetch(apiUrl)
@@ -15,7 +17,7 @@ export async function fetchBikes(page: number) {
 }
 
 export async function fetchProduct(id: string) {
-  const apiUrl = `http://localhost:1337/products?id=${id}`;
+  const apiUrl = `${baseUrl}?id=${id}`;
   try {
     const response = await fetch(apiUrl)
     const data = await response.json();
