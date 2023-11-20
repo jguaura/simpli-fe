@@ -3,7 +3,7 @@ import { Bike } from '@/core/models/bikes.model';
 import styles from './card.module.css';
 import Image from 'next/image';
 import { Kanit } from 'next/font/google';
-import { MdOutlineArrowRightAlt } from 'react-icons/md';
+import { MdOutlineArrowForward } from 'react-icons/md';
 import Link from 'next/link';
 
 interface CardProps {
@@ -30,7 +30,7 @@ function Card({ product }: CardProps) {
         <button>
           <Link href={`/product-detail/${_id}`}>
             <span>More info</span>
-            <MdOutlineArrowRightAlt />
+            <MdOutlineArrowForward />
           </Link>
         </button>
       </div>
