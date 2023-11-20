@@ -1,14 +1,9 @@
 'use client';
-import { createLead } from '@/app/actions/create-leads';
-import { Lato } from 'next/font/google';
-import { useState } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
 import styles from './InfoModalForm.module.css';
 import useInfoModalForm from './hooks/useInfoModalForm';
 
-const lato = Lato({ weight: ['400', '700'], subsets: ['latin'] });
 function InfoModalContent() {
-  const { handleSubmit, onSubmit, register, errors, nameInputStyles, emailInputStyles, submitBtnStyles } = useInfoModalForm();
+  const { handleSubmit, onSubmit, register, errors, nameInputStyles, emailInputStyles, submitBtnStyles, leadResponse } = useInfoModalForm();
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -36,6 +31,7 @@ function InfoModalContent() {
           />
           {errors.email && <span role='alert'>{errors.email.message}</span>}
         </div>
+        {leadResponse.error && <span role='alert' className='error'>{leadResponse.error}</span>}
         <button type='submit' className={submitBtnStyles}>
           Submit
         </button>

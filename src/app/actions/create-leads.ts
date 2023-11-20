@@ -15,10 +15,6 @@ export async function createLead({ name, email }: Lead) {
     });
     const result = await response.json();
 
-    if (!response.ok) {
-      return result.error;
-    }
-
     return result;
   } catch (error) {
     console.error('Error creating lead:', error);

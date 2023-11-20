@@ -109,6 +109,11 @@ button.btn {
   color: red;
 }
 
+span.error {
+  color: red;
+  font-size: .7rem;
+}
+
 .form-control:placeholder {
   color: #dcdcdc;
   font-weight: 400;
