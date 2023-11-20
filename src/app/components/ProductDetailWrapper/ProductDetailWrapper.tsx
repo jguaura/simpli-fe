@@ -4,9 +4,8 @@ import styles from './ProductDetailWrapper.module.css';
 import { Kanit } from 'next/font/google';
 import { removeCloudinaryTransformations } from '@/app/utils/utils';
 import Link from 'next/link';
-import { MdOutlineArrowBack } from "react-icons/md";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../Shared/Shadcn/BaseDialog/BaseDialog';
-import InfoModalContent from './InfoModalContent/InfoModalContent';
+import { MdOutlineArrowBack } from 'react-icons/md';
+import InfoModal from './InfoModal/InfoModal';
 
 interface ProductDetailProps {
   product: Product;
@@ -41,19 +40,7 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
           </div>
           <div className={styles.buttons}>
             <button>Add to cart</button>
-            <Dialog>
-              <DialogTrigger>Get more info</DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>Contact Information</DialogTitle>
-                  <DialogDescription>
-                    To provide you with details about the <strong>{name}</strong>, please
-                    share your contact information with us.
-                  </DialogDescription>
-                </DialogHeader>
-                <InfoModalContent />
-              </DialogContent>
-            </Dialog>
+            <InfoModal />
           </div>
           <span>{description}</span>
         </div>

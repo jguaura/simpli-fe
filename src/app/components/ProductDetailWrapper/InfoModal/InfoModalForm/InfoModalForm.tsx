@@ -3,7 +3,7 @@ import { createLead } from '@/app/actions/create-leads';
 import { Lato } from 'next/font/google';
 import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import styles from './InfoModalContent.module.css';
+import styles from './InfoModalForm.module.css';
 
 type Inputs = {
   name: string;

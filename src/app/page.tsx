@@ -1,5 +1,5 @@
 import styles from './page.module.css';
-import ProductsWrapper from './components/ProductsWrapper/ProductsWrapper';
+import ProductsWrapper from './components/Shared/ProductsWrapper/ProductsWrapper';
 import { fetchProducts } from './actions/fetch-products';
 import LoadMore from './components/LoadMoreProducts/LoadMoreProducts';
 
