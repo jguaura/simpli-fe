@@ -1,14 +1,14 @@
 'use client';
-import { Bike } from '@/app/core/models/bikes.model';
 import styles from './card.module.css';
 import Image from 'next/image';
 import { Kanit } from 'next/font/google';
 import { MdOutlineArrowForward } from 'react-icons/md';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Product } from '@/app/core/models/product.model';
 
 interface CardProps {
-  product: Bike;
+  product: Product;
 }
 
 const kanit = Kanit({ weight: ['400', '600', '700'], subsets: ['latin'] });
