@@ -1,10 +1,9 @@
-import { Lead } from "@/core/models/lead.model";
+import { Lead } from '@/app/core/models/lead.model';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function createLead({ name, email }: Lead) {
   const apiUrl = `${baseUrl}/create-lead`;
-
   try {
     const response = await fetch(apiUrl, {
       method: 'POST',

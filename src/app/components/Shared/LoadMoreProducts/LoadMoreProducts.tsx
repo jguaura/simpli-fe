@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import ProductsWrapper from '../ProductsWrapper/ProductsWrapper';
 import CardSkeleton from '../../UI/CardSkeleton/CardSkeleton';
 import useLoadMoreProducts from './hooks/useLoadMoreProducts';
+import Spinner from './Spinner/Spinner';
 
 function LoadMoreProducts() {
   const { loadMoreProducts, products, ref, inView } = useLoadMoreProducts();
@@ -16,10 +17,8 @@ function LoadMoreProducts() {
   return (
     <>
       <ProductsWrapper products={products} />
-      <div className='products-container' ref={ref}>
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
+      <div ref={ref}>
+        <Spinner />
       </div>
     </>
   );

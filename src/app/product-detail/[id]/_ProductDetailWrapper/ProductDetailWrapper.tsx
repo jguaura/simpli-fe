@@ -1,4 +1,4 @@
-import { Product } from '@/core/models/product.model';
+import { Product } from '@/app/core/models/product.model';
 import Image from 'next/image';
 import styles from './ProductDetailWrapper.module.css';
 import { Kanit } from 'next/font/google';

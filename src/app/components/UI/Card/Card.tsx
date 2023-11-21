@@ -1,5 +1,5 @@
-"use client";
-import { Bike } from '@/core/models/bikes.model';
+'use client';
+import { Bike } from '@/app/core/models/bikes.model';
 import styles from './card.module.css';
 import Image from 'next/image';
 import { Kanit } from 'next/font/google';
