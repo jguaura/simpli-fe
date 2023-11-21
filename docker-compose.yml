@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  next-app:
+    container_name: simpli-fe
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    environment:
+      NEXT_PUBLIC_BASE_URL: ${NEXT_PUBLIC_BASE_URL}
+
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+      - ./next-app/public:/app/public
+    restart: always
+    ports:
+      - 3000:3000

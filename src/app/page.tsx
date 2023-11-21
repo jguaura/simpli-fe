@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Carousel from './components/UI/Carousel/Carousel';
 import styles from './page.module.css';
 export default async function Home() {
@@ -22,10 +23,14 @@ export default async function Home() {
           </p>
           <div className={styles.buttons}>
             <button className='btn'>
-              Explore Bikes
+              <Link href={'/products'}>
+                Explore Bikes
+              </Link>
             </button>
             <button className='btn'>
-              Explore Accesories
+              <Link href={'/accesories'}>
+                Explore Accesories
+              </Link>
             </button>
           </div>
         </section>
