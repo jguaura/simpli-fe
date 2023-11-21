@@ -1,7 +1,35 @@
+import Carousel from './components/UI/Carousel/Carousel';
+import styles from './page.module.css';
 export default async function Home() {
+  const images = [
+    'https://res.cloudinary.com/jguaura/image/upload/c_fill/v1700358842/simpli/ezpbf8h2mb5npzi8gwos.jpg',
+    'https://res.cloudinary.com/jguaura/image/upload/c_fill/v1700358841/simpli/gifdnbzszyyd0xphn2v6.jpg',
+    'https://res.cloudinary.com/jguaura/image/upload/c_fill/v1700358840/simpli/bp1ggamwyycoaijm9ruw.jpg'
+  ];
   return (
-    <main>
-      <h2>Home</h2>
-    </main>
+    <div className={styles.page}>
+      <header>
+        <h1>Welcome to VroomVault</h1>
+        <p>Your Ultimate Destination for Automotive Excellence</p>
+      </header>
+      <main>
+        <Carousel images={images || []} options={{ loop: true }} />
+        <section>
+          <h2>Explore Our Exclusive Collection</h2>
+          <p>
+            Discover a curated selection of premium vehicles and accessories
+            that redefine automotive luxury.
+          </p>
+          <div className={styles.buttons}>
+            <button className='btn'>
+              Explore Bikes
+            </button>
+            <button className='btn'>
+              Explore Accesories
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
