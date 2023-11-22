@@ -12,10 +12,6 @@ export default async function Home() {
 
   return (
     <div className={styles.page}>
-      <Popover>
-        <PopoverTrigger>Open</PopoverTrigger>
-        <PopoverContent>Place content for the popover here.</PopoverContent>
-      </Popover>
       <header>
         <h1>Welcome to VroomVault</h1>
         <p>Your Ultimate Destination for Automotive Excellence</p>
