@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Carousel from './components/UI/Carousel/Carousel';
 import styles from './page.module.css';
+import { Popover, PopoverContent, PopoverTrigger } from './components/UI/BasePopover/BasePopover';
 export default async function Home() {
   const images = [
     'https://res.cloudinary.com/jguaura/image/upload/c_fill/v1700358842/simpli/ezpbf8h2mb5npzi8gwos.jpg',
@@ -9,6 +10,10 @@ export default async function Home() {
   ];
   return (
     <div className={styles.page}>
+      <Popover>
+        <PopoverTrigger>Open</PopoverTrigger>
+        <PopoverContent>Place content for the popover here.</PopoverContent>
+      </Popover>
       <header>
         <h1>Welcome to VroomVault</h1>
         <p>Your Ultimate Destination for Automotive Excellence</p>
@@ -23,14 +28,10 @@ export default async function Home() {
           </p>
           <div className={styles.buttons}>
             <button className='btn'>
-              <Link href={'/products'}>
-                Explore Bikes
-              </Link>
+              <Link href={'/products'}>Explore Bikes</Link>
             </button>
             <button className='btn'>
-              <Link href={'/accesories'}>
-                Explore Accesories
-              </Link>
+              <Link href={'/accesories'}>Explore Accesories</Link>
             </button>
           </div>
         </section>

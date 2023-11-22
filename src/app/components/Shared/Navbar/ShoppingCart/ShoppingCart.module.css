@@ -1,0 +1,17 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.footer .button {
+  background-color: var(--purple);
+  color: white
+}

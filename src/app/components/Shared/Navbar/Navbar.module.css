@@ -11,7 +11,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.25rem;
-  
+}
+
+.navbarInner .buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .navbar .logo {
