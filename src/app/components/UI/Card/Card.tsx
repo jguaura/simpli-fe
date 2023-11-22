@@ -30,7 +30,7 @@ function Card({ product }: CardProps) {
         <h6 className={styles.cardName}>{name}</h6>
         <div className={`${kanit.className}`}>{price}</div>
         <button>
-          <Link href={`/product-detail/${route}-${_id}`}>
+          <Link href={`/product-detail${route}-${_id}`}>
             <span>More info</span>
             <MdOutlineArrowForward />
           </Link>

@@ -3,8 +3,8 @@ import Image from 'next/image';
 import styles from './ProductDetailWrapper.module.css';
 import { Kanit } from 'next/font/google';
 import { removeCloudinaryTransformations } from '@/app/utils/utils';
-import InfoModal from './InfoModal/InfoModal';
 import BackBtn from '../../../components/Shared/BackBtn/BackBtn';
+import ProductDetailButtons from './ProductDetailButtons/ProductDetailButtons';
 
 interface ProductDetailProps {
   product: Product;
@@ -32,8 +32,7 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
             <h6>{price}</h6>
           </div>
           <div className={styles.buttons}>
-            <button>Add to cart</button>
-            <InfoModal productName={name} />
+            <ProductDetailButtons product={product}/>
           </div>
           <span>{description}</span>
         </div>

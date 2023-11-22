@@ -4,6 +4,20 @@
   gap: .8rem;
 }
 
+.cta {
+  position: relative;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: -1px;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;

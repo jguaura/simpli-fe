@@ -2,12 +2,14 @@ import Link from 'next/link';
 import Carousel from './components/UI/Carousel/Carousel';
 import styles from './page.module.css';
 import { Popover, PopoverContent, PopoverTrigger } from './components/UI/BasePopover/BasePopover';
+
 export default async function Home() {
   const images = [
     'https://res.cloudinary.com/jguaura/image/upload/c_fill/v1700358842/simpli/ezpbf8h2mb5npzi8gwos.jpg',
     'https://res.cloudinary.com/jguaura/image/upload/c_fill/v1700358841/simpli/gifdnbzszyyd0xphn2v6.jpg',
     'https://res.cloudinary.com/jguaura/image/upload/c_fill/v1700358840/simpli/bp1ggamwyycoaijm9ruw.jpg'
   ];
+
   return (
     <div className={styles.page}>
       <Popover>
