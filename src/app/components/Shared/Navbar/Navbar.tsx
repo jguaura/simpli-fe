@@ -1,21 +1,9 @@
 'use client';
 import { Chivo } from 'next/font/google';
 import styles from './Navbar.module.css';
-import { MdDehaze, MdOutlineShoppingBasket } from 'react-icons/md';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger
-} from '../../UI/BaseSheet/BaseSheet';
-import NavbarContent from './NavbarContent/NavbarContent';
 import Link from 'next/link';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger
-} from '../../UI/BasePopover/BasePopover';
-import Image from 'next/image';
 import ShoppingCart from './ShoppingCart/ShoppingCart';
+import NavbarSheet from './NavbarSheet/NavbarSheet';
 
 const chivo = Chivo({ subsets: ['latin'] });
 
@@ -33,16 +21,7 @@ function Navbar() {
         </button>
         <div className={styles.buttons}>
           <ShoppingCart />
-          <Sheet>
-            <SheetTrigger asChild>
-              <button>
-                <MdDehaze size='25' />
-              </button>
-            </SheetTrigger>
-            <SheetContent>
-              <NavbarContent />
-            </SheetContent>
-          </Sheet>
+          <NavbarSheet />
         </div>
       </div>
     </div>

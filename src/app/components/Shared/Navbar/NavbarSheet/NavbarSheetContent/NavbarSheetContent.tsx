@@ -1,5 +1,4 @@
 import { Chivo, Kanit } from 'next/font/google';
-import styles from './NavbarContent.module.css';
 import {
   SiInstagram,
   SiFacebook,
@@ -8,12 +7,13 @@ import {
   SiGithub
 } from 'react-icons/si';
 import Link from 'next/link';
-import { SheetClose } from '../../../UI/BaseSheet/BaseSheet';
+import { SheetClose } from '../../../../UI/BaseSheet/BaseSheet';
+import styles from './NavbarSheetContent.module.css';
 
 const chivo = Chivo({ subsets: ['latin'] });
 const kanit = Kanit({ weight: ['400', '600', '700'], subsets: ['latin'] });
 
-function NavbarContent() {
+function NavbarSheetContent() {
   const logoStyles = `${chivo.className} ${styles.logo}`;
   const itemsStyles = `${kanit.className} ${styles.items}`;
   const socialMediaStyles = `${kanit.className} ${styles.socialMedia}`;
@@ -55,4 +55,4 @@ function NavbarContent() {
   );
 }
 
-export default NavbarContent;
+export default NavbarSheetContent;
