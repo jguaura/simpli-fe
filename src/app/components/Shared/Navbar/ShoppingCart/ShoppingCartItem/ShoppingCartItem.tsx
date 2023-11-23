@@ -24,7 +24,7 @@ function ShoppingCartItem({ product }: ShoppingCartItemProps) {
         <Image width={150} height={150} alt='alt' src={image} />
         <div className={styles.itemDetail}>
           <h6 className={kanit.className}>{name}</h6>
-          <span>{price}</span>
+          <span>${price}</span>
         </div>
       </div>
       <button onClick={handleProductRemove} aria-label='delete shopping cart item'>
