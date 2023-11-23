@@ -11,7 +11,6 @@ export async function fetchProducts(page: number, route: string) {
   try {
     const response = await fetch(apiUrl, { next: { tags: ['products'] } });
     const data = await response.json();
-    revalidateTag('products');
     return data;
   } catch (error) {
     console.error('Error', error);
@@ -27,7 +26,6 @@ export async function fetchProduct(id: string) {
   try {
     const response = await fetch(apiUrl, { next: { tags: ['product'] } });
     const data = await response.json();
-    revalidateTag('products');
     return data;
   } catch (error) {
     console.error('Error', error);
