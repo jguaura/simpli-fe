@@ -1,7 +1,6 @@
 'use client';
 import { useEffect } from 'react';
 import ProductsWrapper from '../ProductsWrapper/ProductsWrapper';
-import CardSkeleton from '../../UI/CardSkeleton/CardSkeleton';
 import useLoadMoreProducts from './hooks/useLoadMoreProducts';
 import Spinner from './Spinner/Spinner';
 

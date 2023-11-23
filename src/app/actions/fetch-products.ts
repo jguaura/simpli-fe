@@ -4,7 +4,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function fetchProducts(page: number, route: string) {
   const limit = 12;
-  const apiUrl = `${baseUrl}${route}?${page}&limit=${limit}`;
+  const apiUrl = `${baseUrl}${route}?page=${page}&limit=${limit}`;
 
   try {
     const response = await fetch(apiUrl);
