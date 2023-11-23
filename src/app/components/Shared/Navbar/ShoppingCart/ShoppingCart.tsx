@@ -12,6 +12,7 @@ import { useProductsContext } from '@/app/context/products.context';
 function ShoppingCart() {
   const { products, total } = useProductsContext();
   const ctaStyles = `${styles.button} btn`;
+
   return (
     <Popover>
       <PopoverTrigger aria-labelledby='shopping cart' asChild>
@@ -25,7 +26,7 @@ function ShoppingCart() {
           products.map((product, index) => (
             <ShoppingCartItem product={product} key={index} />
           ))}
-        {products?.length ? (
+        {total > 0 ? (
           <div className={styles.footer}>
             <span>Total: ${total}</span>
             <button className={ctaStyles}>Buy now</button>

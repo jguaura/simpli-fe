@@ -29,7 +29,7 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
         <div className={styles.content}>
           <div>
             <h3 className={kanit.className}>{name}</h3>
-            <h6>{price}</h6>
+            <h6>${price}</h6>
           </div>
           <div className={styles.buttons}>
             <ProductDetailButtons product={product}/>

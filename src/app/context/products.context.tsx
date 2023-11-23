@@ -24,16 +24,17 @@ interface Props {
   children: ReactNode;
 }
 
-
-
 export const ProductsContextProvider = ({ children }: Props) => {
   const [products, setProducts] = useState<Product[] | null>(null);
   const total = products
     ? products.reduce((sum, product) => {
-        const priceWithoutSymbol = product.price.replace('$', '');
-        const priceAsFloat = parseFloat(priceWithoutSymbol);
-        return isNaN(priceAsFloat) ? sum : sum + priceAsFloat;
-      }, 0)
+        const priceAsFloat = typeof product.price === 'number' ? product.price : parseFloat(product.price);
+
+        if (!isNaN(priceAsFloat)) {
+          return sum + priceAsFloat;
+        }
+        return sum;
+    }, 0)
     : 0;
 
   const removeProduct = (productId: string) => {

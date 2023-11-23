@@ -12,7 +12,6 @@ interface CardProps {
 }
 
 const kanit = Kanit({ weight: ['400', '600', '700'], subsets: ['latin'] });
-
 function Card({ product }: CardProps) {
   const { name, description, price, image, _id } = product;
   const route = usePathname();
@@ -28,7 +27,7 @@ function Card({ product }: CardProps) {
       </div>
       <div className={styles.cardInfo}>
         <h6 className={styles.cardName}>{name}</h6>
-        <div className={`${kanit.className}`}>{price}</div>
+        <div className={`${kanit.className}`}>${price}</div>
         <button>
           <Link href={`/product-detail${route}-${_id}`}>
             <span>More info</span>
