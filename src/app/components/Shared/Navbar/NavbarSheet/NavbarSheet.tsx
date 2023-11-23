@@ -10,7 +10,7 @@ function NavbarSheet() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button>
+        <button aria-label='navigation menu'>
           <MdDehaze size='25' />
         </button>
       </SheetTrigger>

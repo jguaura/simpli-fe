@@ -15,8 +15,8 @@ function ShoppingCart() {
 
   return (
     <Popover>
-      <PopoverTrigger aria-labelledby='shopping cart' asChild>
-        <button className={styles.cta}>
+      <PopoverTrigger asChild>
+        <button className={styles.cta} aria-label='shopping cart'>
           {products?.length ? <div className={styles.dot}></div> : <></>}
           <MdOutlineShoppingBasket size='25' />
         </button>
