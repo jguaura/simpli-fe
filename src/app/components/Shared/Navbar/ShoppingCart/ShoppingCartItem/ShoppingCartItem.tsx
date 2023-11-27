@@ -12,23 +12,23 @@ interface ShoppingCartItemProps {
 }
 
 function ShoppingCartItem({ product }: ShoppingCartItemProps) {
-  const { removeProduct } = useProductsContext()
+  const { removeProduct } = useProductsContext();
   const { image, name, price, _id } = product;
 
   const handleProductRemove = () => {
-    removeProduct(_id)
-  }
+    removeProduct(_id);
+  };
   return (
     <div className={styles.item}>
       <div className={styles.itemContent}>
-        <Image width={150} height={150} alt='alt' src={image} />
+        <Image width={150} height={150} alt="alt" src={image} />
         <div className={styles.itemDetail}>
           <h6 className={kanit.className}>{name}</h6>
           <span>${price}</span>
         </div>
       </div>
-      <button onClick={handleProductRemove} aria-label='delete shopping cart item'>
-        <IoTrashOutline size='20' />
+      <button onClick={handleProductRemove} aria-label="delete shopping cart item">
+        <IoTrashOutline size="20" />
       </button>
     </div>
   );

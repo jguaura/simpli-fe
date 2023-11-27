@@ -8,15 +8,15 @@ const mockProducts: Product[] = [
     name: 'Bike 1',
     description: 'The STREET BOB® 114 is a stripped-down, no-nonsense cruiser that packs a punch. Featuring the potent Milwaukee-Eight® 114 engine,',
     image: 'https://res.cloudinary.com/jguaura/image/upload/v1700358843/simpli/xldbkboyy2uvfpush9sf.jpg',
-    price: 600,
+    price: 600
   },
   {
     _id: '2',
     name: 'Bike 2',
     description: 'The FAT BOY® 114 is an icon reborn, with a muscular presence and the brawny Milwaukee-Eight® 114 engine',
     image: 'https://res.cloudinary.com/jguaura/image/upload/v1700358842/simpli/vuvwqqnd32bh01t6nmwg.webp',
-    price: 500,
-  },
+    price: 500
+  }
 ];
 
 describe('ProductsWrapper Component', () => {
@@ -25,7 +25,7 @@ describe('ProductsWrapper Component', () => {
 
     expect(screen.queryByText('Error loading bikes')).not.toBeInTheDocument();
 
-    mockProducts.forEach((product) => {
+    mockProducts.forEach(product => {
       expect(screen.getByText(product.name)).toBeInTheDocument();
       expect(screen.getByText(`$${product.price}`)).toBeInTheDocument();
       const productImage = screen.getByAltText(product.name);

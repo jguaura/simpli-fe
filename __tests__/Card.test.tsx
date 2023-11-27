@@ -8,7 +8,7 @@ const mockProduct: Product = {
   name: 'Sample Product',
   description: 'A sample product description',
   price: 19.99,
-  image:'https://res.cloudinary.com/jguaura/image/upload/v1700556963/cld-sample.jpg'
+  image: 'https://res.cloudinary.com/jguaura/image/upload/v1700556963/cld-sample.jpg'
 };
 
 describe('Card component', () => {
@@ -33,5 +33,4 @@ describe('Card component', () => {
     const link = screen.getByRole('link', { name: 'More info' });
     expect(link).toHaveAttribute('href');
   });
-
 });

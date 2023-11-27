@@ -6,16 +6,16 @@ import { Product } from '@/app/core/models/product.model';
 import useLoadMoreProducts from '@/app/components/Shared/LoadMoreProducts/hooks/useLoadMoreProducts';
 
 jest.mock('next/navigation', () => ({
-  usePathname: jest.fn(),
+  usePathname: jest.fn()
 }));
 
 jest.mock('react-intersection-observer', () => ({
   __esModule: true,
-  useInView: jest.fn(),
+  useInView: jest.fn()
 }));
 
 jest.mock('@/app/actions/fetch-products', () => ({
-  fetchProducts: jest.fn(),
+  fetchProducts: jest.fn()
 }));
 
 describe('useLoadMoreProducts', () => {
@@ -52,7 +52,7 @@ describe('useLoadMoreProducts', () => {
     }
 
     render(<TestComponent />);
-    
+
     // Initial state
     expect(hookResult.products).toEqual([]);
 
@@ -63,7 +63,7 @@ describe('useLoadMoreProducts', () => {
       });
       hookResult.ref({});
     });
-  
+
     await act(async () => {
       await hookResult.loadMoreProducts();
     });

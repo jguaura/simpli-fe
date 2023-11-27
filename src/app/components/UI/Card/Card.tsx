@@ -19,12 +19,7 @@ function Card({ product }: CardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <Image
-          src={image}
-          fill
-          alt={name}
-          style={{ objectFit: 'contain' }}
-        />
+        <Image src={image} fill alt={name} style={{ objectFit: 'contain' }} />
       </div>
       <div className={styles.cardInfo}>
         <h6 className={styles.cardName}>{name}</h6>

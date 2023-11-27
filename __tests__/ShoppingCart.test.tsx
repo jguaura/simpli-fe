@@ -17,16 +17,14 @@ describe('ShoppingCart Component', () => {
           name: 'Product 1',
           description: 'Prod desc 1',
           price: 10,
-          image:
-            'https://res.cloudinary.com/jguaura/image/upload/v1700358841/simpli/rdoat9cz5in04xbofmt1.jpg'
+          image: 'https://res.cloudinary.com/jguaura/image/upload/v1700358841/simpli/rdoat9cz5in04xbofmt1.jpg'
         },
         {
           _id: '2',
           name: 'Product 2',
           description: 'Prod desc 2',
           price: 11,
-          image:
-            'https://res.cloudinary.com/jguaura/image/upload/v1700358843/simpli/xldbkboyy2uvfpush9sf.jpg'
+          image: 'https://res.cloudinary.com/jguaura/image/upload/v1700358843/simpli/xldbkboyy2uvfpush9sf.jpg'
         }
       ],
       total: 100,
@@ -35,7 +33,7 @@ describe('ShoppingCart Component', () => {
     };
 
     (ProductsContext.useProductsContext as jest.Mock).mockReturnValue(mockContextValue);
-    
+
     render(<ShoppingCart />);
 
     expect(screen.getByLabelText('shopping cart')).toBeInTheDocument();
@@ -60,9 +58,8 @@ describe('ShoppingCart Component', () => {
     render(<ShoppingCart />);
 
     await userEvent.click(screen.getByLabelText('shopping cart'));
-   
+
     const emptyCartMessage = screen.getByText('Your shopping cart is empty.');
     expect(emptyCartMessage).toBeInTheDocument();
-   
   });
 });

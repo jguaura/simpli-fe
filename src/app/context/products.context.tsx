@@ -1,12 +1,5 @@
-"use client"
-import {
-  ReactNode,
-  createContext,
-  useContext,
-  useState,
-  Dispatch,
-  SetStateAction
-} from 'react';
+'use client';
+import { ReactNode, createContext, useContext, useState, Dispatch, SetStateAction } from 'react';
 import { Product } from '../core/models/product.model';
 
 export interface ProductsContextProps {
@@ -16,9 +9,7 @@ export interface ProductsContextProps {
   total: number;
 }
 
-const ProductsContext = createContext<ProductsContextProps | undefined>(
-  undefined
-);
+const ProductsContext = createContext<ProductsContextProps | undefined>(undefined);
 
 interface Props {
   children: ReactNode;
@@ -34,31 +25,25 @@ export const ProductsContextProvider = ({ children }: Props) => {
           return sum + priceAsFloat;
         }
         return sum;
-    }, 0)
+      }, 0)
     : 0;
 
   const removeProduct = (productId: string) => {
-    setProducts((prevProducts) => {
+    setProducts(prevProducts => {
       if (!prevProducts) {
         return null;
       }
-      return prevProducts.filter((product) => product._id !== productId);
+      return prevProducts.filter(product => product._id !== productId);
     });
   };
 
-  return (
-    <ProductsContext.Provider value={{ products, setProducts, total, removeProduct }}>
-      {children}
-    </ProductsContext.Provider>
-  );
+  return <ProductsContext.Provider value={{ products, setProducts, total, removeProduct }}>{children}</ProductsContext.Provider>;
 };
 
 export const useProductsContext = () => {
   const context = useContext(ProductsContext);
   if (!context) {
-    throw new Error(
-      'useProductsContext must be used within a ProductsContextProvider'
-    );
+    throw new Error('useProductsContext must be used within a ProductsContextProvider');
   }
   return context;
 };

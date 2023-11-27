@@ -19,15 +19,12 @@ export default async function Home() {
         <Carousel images={images || []} options={{ loop: true }} />
         <section>
           <h2>Explore Our Exclusive Collection</h2>
-          <p>
-            Discover a curated selection of premium vehicles and accessories
-            that redefine automotive luxury.
-          </p>
+          <p>Discover a curated selection of premium vehicles and accessories that redefine automotive luxury.</p>
           <div className={styles.buttons}>
-            <button className='btn'>
+            <button className="btn">
               <Link href={'/products'}>Explore Bikes</Link>
             </button>
-            <button className='btn'>
+            <button className="btn">
               <Link href={'/accesories'}>Explore Accesories</Link>
             </button>
           </div>
