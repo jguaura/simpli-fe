@@ -11,13 +11,8 @@ function CartButton({ product }: Test) {
   const { setProducts } = useProductsContext();
 
   const handleSetProduct = () => {
-    setProducts((prevProducts) => {
-      if (
-        !prevProducts ||
-        !prevProducts.some(
-          (existingProduct) => existingProduct._id === product._id
-        )
-      ) {
+    setProducts(prevProducts => {
+      if (!prevProducts || !prevProducts.some(existingProduct => existingProduct._id === product._id)) {
         return [...(prevProducts || []), product];
       }
       return prevProducts || [];

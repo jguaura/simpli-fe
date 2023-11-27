@@ -1,9 +1,6 @@
 'use client';
 
-import useEmblaCarousel, {
-  EmblaCarouselType,
-  EmblaOptionsType
-} from 'embla-carousel-react';
+import useEmblaCarousel, { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel-react';
 import Image from 'next/image';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useEnabledCarousel } from './hooks/useCarousel/useCarousel';
@@ -16,8 +13,7 @@ interface CarouselProps {
 
 function Carousel({ options, images }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
-  const { onSelectCarousel } =
-    useEnabledCarousel();
+  const { onSelectCarousel } = useEnabledCarousel();
 
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const imageByIndex = (index: number): string => images[index % images.length];
@@ -40,19 +36,13 @@ function Carousel({ options, images }: CarouselProps) {
 
   return (
     <>
-      <div className='embla relative'>
-        <div className='embla__viewport' ref={emblaRef}>
-          <div className='embla__container'>
-            {slides.map((index) => (
-              <div className='embla__slide' key={index}>
-                <div className='embla__slide__wrapper'>
-                  <Image
-                    className='embla__slide__img'
-                    src={imageByIndex(index)}
-                    alt='product image'
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
+      <div className="embla relative">
+        <div className="embla__viewport" ref={emblaRef}>
+          <div className="embla__container">
+            {slides.map(index => (
+              <div className="embla__slide" key={index}>
+                <div className="embla__slide__wrapper">
+                  <Image className="embla__slide__img" src={imageByIndex(index)} alt="product image" fill style={{ objectFit: 'contain' }} />
                 </div>
               </div>
             ))}

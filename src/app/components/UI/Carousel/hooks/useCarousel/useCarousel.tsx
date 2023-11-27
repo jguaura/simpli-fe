@@ -1,6 +1,6 @@
-"use client"
-import { EmblaCarouselType } from "embla-carousel-react";
-import { useCallback, useState } from "react";
+'use client';
+import { EmblaCarouselType } from 'embla-carousel-react';
+import { useCallback, useState } from 'react';
 
 export const useEnabledCarousel = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);

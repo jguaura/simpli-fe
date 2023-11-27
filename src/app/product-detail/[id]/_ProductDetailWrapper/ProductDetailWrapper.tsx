@@ -19,12 +19,7 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
       <BackBtn />
       <div className={styles.containerInner}>
         <div className={styles.imgContainer}>
-          <Image
-            src={removeCloudinaryTransformations(image)}
-            alt={name}
-            fill
-            style={{ objectFit: 'contain' }}
-          />
+          <Image src={removeCloudinaryTransformations(image)} alt={name} fill style={{ objectFit: 'contain' }} />
         </div>
         <div className={styles.content}>
           <div>
@@ -32,7 +27,7 @@ function ProductDetailWrapper({ product }: ProductDetailProps) {
             <h6>${price}</h6>
           </div>
           <div className={styles.buttons}>
-            <ProductDetailButtons product={product}/>
+            <ProductDetailButtons product={product} />
           </div>
           <span>{description}</span>
         </div>

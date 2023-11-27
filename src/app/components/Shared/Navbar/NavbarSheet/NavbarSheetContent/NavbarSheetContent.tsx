@@ -1,11 +1,5 @@
 import { Chivo, Kanit } from 'next/font/google';
-import {
-  SiInstagram,
-  SiFacebook,
-  SiTwitter,
-  SiWhatsapp,
-  SiGithub
-} from 'react-icons/si';
+import { SiInstagram, SiFacebook, SiTwitter, SiWhatsapp, SiGithub } from 'react-icons/si';
 import Link from 'next/link';
 import { SheetClose } from '../../../../UI/BaseSheet/BaseSheet';
 import styles from './NavbarSheetContent.module.css';
@@ -23,26 +17,24 @@ function NavbarSheetContent() {
       <h2 className={logoStyles}>VroomVault</h2>
       <div className={itemsStyles}>
         <SheetClose asChild>
-          <Link href='/'>Home</Link>
+          <Link href="/">Home</Link>
         </SheetClose>
         <SheetClose asChild>
-          <Link href='/products'>Bikes</Link>
+          <Link href="/products">Bikes</Link>
         </SheetClose>
         <SheetClose asChild>
-          <Link href='/accesories'>Accesories</Link>
+          <Link href="/accesories">Accesories</Link>
         </SheetClose>
       </div>
       <div className={socialMediaStyles}>
         <div className={styles.icons}>
-          <SiFacebook size='20' />
-          <SiWhatsapp size='20' />
-          <SiInstagram size='20' />
-          <SiTwitter size='20' />
+          <SiFacebook size="20" />
+          <SiWhatsapp size="20" />
+          <SiInstagram size="20" />
+          <SiTwitter size="20" />
         </div>
         <div className={styles.footer}>
-          <div className={styles.copy}>
-            VroomVault &copy; 2023. All rights reserved.
-          </div>
+          <div className={styles.copy}>VroomVault &copy; 2023. All rights reserved.</div>
           <div className={styles.promo}>
             <span>Jose R. Guaura</span>
             <button>

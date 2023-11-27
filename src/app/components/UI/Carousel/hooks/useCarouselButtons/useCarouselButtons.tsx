@@ -1,5 +1,5 @@
-"use client"
-import { useCallback } from "react";
+'use client';
+import { useCallback } from 'react';
 
 export const useCarouselControls = (emblaApi: any) => {
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);

@@ -1,10 +1,10 @@
-"use client"
-import { createLead } from "@/app/actions/create-leads";
-import { Lato } from "next/font/google";
-import { useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+'use client';
+import { createLead } from '@/app/actions/create-leads';
+import { Lato } from 'next/font/google';
+import { useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import styles from '../InfoModalForm.module.css';
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
 export type Inputs = {
   name: string;
@@ -20,7 +20,7 @@ interface LeadAPIResponse {
 const lato = Lato({ weight: ['400', '700'], subsets: ['latin'] });
 
 const useInfoModalForm = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [leadResponse, setLeadResponse] = useState<LeadAPIResponse>({});
   const {
     register,
@@ -28,10 +28,10 @@ const useInfoModalForm = () => {
     formState: { errors }
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+  const onSubmit: SubmitHandler<Inputs> = async data => {
     const response = await createLead(data);
     setLeadResponse(response);
-    if(!response.error) router.push('/thank-you')
+    if (!response.error) router.push('/thank-you');
   };
 
   const nameInputStyles = `${errors?.name?.message ? 'error' : ''} ${lato.className}`;

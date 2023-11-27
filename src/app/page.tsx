@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Carousel from './components/UI/Carousel/Carousel';
 import styles from './page.module.css';
-import { Popover, PopoverContent, PopoverTrigger } from './components/UI/BasePopover/BasePopover';
 
 export default async function Home() {
   const images = [
@@ -20,15 +19,12 @@ export default async function Home() {
         <Carousel images={images || []} options={{ loop: true }} />
         <section>
           <h2>Explore Our Exclusive Collection</h2>
-          <p>
-            Discover a curated selection of premium vehicles and accessories
-            that redefine automotive luxury.
-          </p>
+          <p>Discover a curated selection of premium vehicles and accessories that redefine automotive luxury.</p>
           <div className={styles.buttons}>
-            <button className='btn'>
+            <button className="btn">
               <Link href={'/products'}>Explore Bikes</Link>
             </button>
-            <button className='btn'>
+            <button className="btn">
               <Link href={'/accesories'}>Explore Accesories</Link>
             </button>
           </div>

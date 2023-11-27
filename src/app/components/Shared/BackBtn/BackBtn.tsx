@@ -1,7 +1,7 @@
-"use client"
-import { useRouter } from "next/navigation";
-import { MdOutlineArrowBack } from "react-icons/md";
-import styles from './BackBtn.module.css'
+'use client';
+import { useRouter } from 'next/navigation';
+import { MdOutlineArrowBack } from 'react-icons/md';
+import styles from './BackBtn.module.css';
 
 function BackBtn() {
   const router = useRouter();

@@ -1,7 +1,4 @@
-"use server"
-
-import { revalidateTag } from "next/cache";
-
+'use server';
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function fetchProducts(page: number, route: string) {
@@ -21,7 +18,7 @@ export async function fetchProducts(page: number, route: string) {
 export async function fetchProduct(id: string) {
   const idParams = id.split('-');
   const _id = idParams[1];
-  const route = idParams[0]
+  const route = idParams[0];
   const apiUrl = `${baseUrl}/${route}?id=${_id}`;
   try {
     const response = await fetch(apiUrl, { next: { tags: ['product'] } });
@@ -32,4 +29,3 @@ export async function fetchProduct(id: string) {
     return null;
   }
 }
-
