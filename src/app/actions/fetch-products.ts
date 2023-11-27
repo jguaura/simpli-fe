@@ -1,7 +1,4 @@
 "use server"
-
-import { revalidateTag } from "next/cache";
-
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function fetchProducts(page: number, route: string) {

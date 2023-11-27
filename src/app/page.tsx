@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Carousel from './components/UI/Carousel/Carousel';
 import styles from './page.module.css';
-import { Popover, PopoverContent, PopoverTrigger } from './components/UI/BasePopover/BasePopover';
 
 export default async function Home() {
   const images = [
