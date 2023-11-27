@@ -9,7 +9,7 @@ import {
 } from 'react';
 import { Product } from '../core/models/product.model';
 
-interface ProductsContextProps {
+export interface ProductsContextProps {
   products: Product[] | null;
   setProducts: Dispatch<SetStateAction<Product[] | null>>;
   removeProduct: (productId: string) => void;

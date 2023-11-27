@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import {
   Popover,
   PopoverContent,
@@ -26,13 +26,13 @@ function ShoppingCart() {
           products.map((product, index) => (
             <ShoppingCartItem product={product} key={index} />
           ))}
-        {total > 0 ? (
+        {total === 0 ? (
+          <p>Your shopping cart is empty.</p>
+        ) : (
           <div className={styles.footer}>
             <span>Total: ${total}</span>
             <button className={ctaStyles}>Buy now</button>
           </div>
-        ) : (
-          <p>Your shopping cart is empty.</p>
         )}
       </PopoverContent>
     </Popover>

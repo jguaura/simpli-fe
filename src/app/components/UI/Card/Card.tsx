@@ -12,6 +12,7 @@ interface CardProps {
 }
 
 const kanit = Kanit({ weight: ['400', '600', '700'], subsets: ['latin'] });
+
 function Card({ product }: CardProps) {
   const { name, description, price, image, _id } = product;
   const route = usePathname();
@@ -21,7 +22,7 @@ function Card({ product }: CardProps) {
         <Image
           src={image}
           fill
-          alt={description}
+          alt={name}
           style={{ objectFit: 'contain' }}
         />
       </div>
