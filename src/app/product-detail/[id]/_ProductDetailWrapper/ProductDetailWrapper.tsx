@@ -2,7 +2,7 @@ import { Product } from '@/app/core/models/product.model';
 import Image from 'next/image';
 import styles from './ProductDetailWrapper.module.css';
 import { Kanit } from 'next/font/google';
-import { removeCloudinaryTransformations } from '@/app/utils/utils';
+import { removeCloudinaryTransformations } from '@/app/core/utils/utils';
 import BackBtn from '../../../components/Shared/BackBtn/BackBtn';
 import ProductDetailButtons from './ProductDetailButtons/ProductDetailButtons';
 

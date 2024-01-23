@@ -1,4 +1,4 @@
-import ShoppingCart from '@/app/components/Shared/Navbar/ShoppingCart/ShoppingCart';
+import ShoppingCart from '@/app/components/Shared/Navbar/components/ShoppingCart/ShoppingCart';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import * as ProductsContext from '@/app/context/products.context';

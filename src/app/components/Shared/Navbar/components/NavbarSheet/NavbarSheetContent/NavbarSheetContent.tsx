@@ -1,7 +1,7 @@
 import { Chivo, Kanit } from 'next/font/google';
 import { SiInstagram, SiFacebook, SiTwitter, SiWhatsapp, SiGithub } from 'react-icons/si';
 import Link from 'next/link';
-import { SheetClose } from '../../../../UI/BaseSheet/BaseSheet';
+import { SheetClose } from '../../../../../UI/BaseSheet/BaseSheet';
 import styles from './NavbarSheetContent.module.css';
 
 const chivo = Chivo({ subsets: ['latin'] });

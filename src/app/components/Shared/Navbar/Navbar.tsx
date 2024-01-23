@@ -2,8 +2,8 @@
 import { Chivo } from 'next/font/google';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
-import ShoppingCart from './ShoppingCart/ShoppingCart';
-import NavbarSheet from './NavbarSheet/NavbarSheet';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import NavbarSheet from './components/NavbarSheet/NavbarSheet';
 
 const chivo = Chivo({ subsets: ['latin'] });
 

@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import ProductsWrapper from '../ProductsWrapper/ProductsWrapper';
 import useLoadMoreProducts from './hooks/useLoadMoreProducts';
-import Spinner from './Spinner/Spinner';
+import Spinner from './components/Spinner/Spinner';
 
 function LoadMoreProducts() {
   const { loadMoreProducts, products, ref, inView } = useLoadMoreProducts();
